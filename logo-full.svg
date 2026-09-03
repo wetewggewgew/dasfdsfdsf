@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" width="260" height="72">
+  <g transform="translate(36 36)">
+    <g fill="none" stroke="#c96442" stroke-linecap="round">
+      <circle r="12" stroke-width="6.6" stroke-dasharray="50 24" transform="rotate(-100)"/>
+      <circle r="20.4" stroke-width="5.4" stroke-dasharray="72 56" transform="rotate(-70)" opacity="0.8"/>
+      <circle r="28.2" stroke-width="4.2" stroke-dasharray="78 99" transform="rotate(-40)" opacity="0.55"/>
+    </g>
+    <circle r="4.8" fill="#c96442"/>
+  </g>
+  <text x="82" y="46" fill="#f0efec" font-family="Hanken Grotesk, system-ui, sans-serif" font-size="30" letter-spacing="0.4">Moreal</text>
+</svg>

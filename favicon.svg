@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-42 -42 84 84">
+  <!-- Тесная рамка: знак занимает почти всё поле, иначе в 16 пикселях
+       он выглядит мелкой точкой посреди пустоты.
+       Фон прозрачный — знак ложится и на тёмную, и на светлую панель браузера. -->
+  <g fill="none" stroke="#c96442" stroke-linecap="round">
+    <circle r="17" stroke-width="14" stroke-dasharray="72 34" transform="rotate(-100)">
+      <animateTransform attributeName="transform" type="scale" additive="sum"
+        values="1;1.07;0.99;1;1" keyTimes="0;0.16;0.34;0.62;1" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="32" stroke-width="12" stroke-dasharray="113 88" transform="rotate(-70)" opacity="0.82">
+      <animateTransform attributeName="transform" type="scale" additive="sum"
+        values="1;1.07;0.99;1;1" keyTimes="0;0.16;0.34;0.62;1" dur="3.4s" begin="0.26s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <circle r="9" fill="#c96442">
+    <animate attributeName="r" values="9;11;9;9" keyTimes="0;0.14;0.7;1" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
