@@ -1,13 +1,11 @@
 
-#aifarm-access-gate{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));background:radial-gradient(circle at 50% 28%,rgba(201,100,66,.10),rgba(0,0,0,0) 55%),rgba(6,7,7,.94);overflow:auto;overscroll-behavior:none;touch-action:none;animation:aifarm-gate-in .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
+#aifarm-access-gate{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));background:#000;overflow:auto;overscroll-behavior:none;touch-action:none;animation:aifarm-gate-in .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
 
-.aifarm-access-card{position:relative;overflow:hidden;width:min(520px,100%);max-height:calc(100dvh - 32px);overflow-y:auto;box-sizing:border-box;padding:clamp(20px,5vw,30px);border-radius:var(--r-xl,20px);background:var(--ink-800,#0c0d0c);border:1px solid var(--line,rgba(255,255,255,.09));box-shadow:var(--shadow-lg,0 24px 80px rgba(0,0,0,.45)),var(--edge-light,inset 0 1px 0 rgba(255,255,255,.03));color:inherit;font-family:var(--font-ui,inherit);touch-action:auto;animation:aifarm-card-in .48s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
+.aifarm-access-wrap{display:flex;flex-direction:column;align-items:center;gap:18px;width:min(520px,100%)}
 
-.aifarm-watermark{position:absolute;top:-42px;right:-42px;width:190px;height:190px;pointer-events:none;z-index:0;opacity:.13;transform-origin:50% 50%;animation:aifarm-mark-breathe 8s ease-in-out infinite}
+.aifarm-access-card{position:relative;overflow:hidden;width:100%;max-height:calc(100dvh - 110px);overflow-y:auto;box-sizing:border-box;padding:clamp(20px,5vw,30px);border-radius:var(--r-xl,20px);background:var(--ink-800,#0c0d0c);border:1px solid var(--line,rgba(255,255,255,.09));box-shadow:var(--shadow-lg,0 24px 80px rgba(0,0,0,.45)),var(--edge-light,inset 0 1px 0 rgba(255,255,255,.03));color:inherit;font-family:var(--font-ui,inherit);touch-action:auto;animation:aifarm-card-in .48s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
 
-.aifarm-brand{position:relative;z-index:1;display:flex;align-items:center;gap:9px;margin-bottom:10px;animation:aifarm-fade-up .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
-.aifarm-mark{width:22px;height:22px;flex:0 0 auto;transform-origin:50% 50%;animation:aifarm-mark-breathe 5.4s ease-in-out infinite}
-.aifarm-access-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-hi,#d3775a);opacity:.9}
+.aifarm-access-label{position:relative;z-index:1;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-hi,#d3775a);opacity:.9;margin-bottom:8px;animation:aifarm-fade-up .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
 
 .aifarm-access-card h2{position:relative;z-index:1;margin:0 0 10px;font-family:var(--font-display,Georgia,serif);font-weight:400;font-size:clamp(21px,6vw,28px);line-height:1.15;animation:aifarm-fade-up .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) .06s both}
 .aifarm-access-card p{position:relative;z-index:1;margin:0;color:var(--text-2,inherit);opacity:.85;font-size:13px;line-height:1.6;animation:aifarm-fade-up .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) .12s both}
@@ -22,11 +20,15 @@
 .aifarm-error{position:relative;z-index:1;margin-top:14px;padding:12px 14px;font-size:12px;line-height:1.5;border-radius:10px;background:rgba(180,80,70,.12);border:1px solid rgba(180,80,70,.4);animation:aifarm-fade-up .4s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) both}
 .aifarm-error a{color:inherit;text-decoration:underline}
 
+.aifarm-welcome{display:flex;flex-direction:column;align-items:center;gap:8px;animation:aifarm-fade-up .5s var(--ease-soft,cubic-bezier(.22,.61,.36,1)) .3s both}
+.aifarm-welcome-mark{width:34px;height:34px;transform-origin:50% 50%;animation:aifarm-mark-breathe 5.4s ease-in-out infinite}
+.aifarm-welcome-text{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2,#97958f);opacity:.8}
+
 @keyframes aifarm-gate-in{from{opacity:0}to{opacity:1}}
 @keyframes aifarm-card-in{from{opacity:0;transform:translateY(16px) scale(.965)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes aifarm-fade-up{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 @keyframes aifarm-code-in{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
-@keyframes aifarm-mark-breathe{0%,100%{transform:scale(1) rotate(0deg);opacity:.85}50%{transform:scale(1.07) rotate(4deg);opacity:1}}
+@keyframes aifarm-mark-breathe{0%,100%{transform:scale(1) rotate(0deg);opacity:.85}50%{transform:scale(1.1) rotate(6deg);opacity:1}}
 
-@media(max-width:520px){.aifarm-access-card{max-height:calc(100dvh - 24px);padding:18px}.aifarm-code{font-size:12px}.aifarm-watermark{width:150px;height:150px;top:-32px;right:-32px}}
-@media (prefers-reduced-motion: reduce){#aifarm-access-gate,.aifarm-access-card,.aifarm-mark,.aifarm-watermark,.aifarm-brand,.aifarm-access-card h2,.aifarm-access-card p,.aifarm-code,.aifarm-access-card button,.aifarm-error{animation:none}}
+@media(max-width:520px){.aifarm-access-card{max-height:calc(100dvh - 110px);padding:18px}.aifarm-code{font-size:12px}.aifarm-welcome-mark{width:28px;height:28px}}
+@media (prefers-reduced-motion: reduce){#aifarm-access-gate,.aifarm-access-card,.aifarm-welcome-mark,.aifarm-access-label,.aifarm-access-card h2,.aifarm-access-card p,.aifarm-code,.aifarm-access-card button,.aifarm-error,.aifarm-welcome{animation:none}}
